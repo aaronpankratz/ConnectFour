@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D50F92401CDFD13400C5CA5B"
+               BlueprintIdentifier = "D50F92711CDFD20300C5CA5B"
                BuildableName = "ConnectFour.app"
                BlueprintName = "ConnectFour"
                ReferencedContainer = "container:ConnectFour.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D50F92591CDFD13400C5CA5B"
+               BlueprintIdentifier = "D50F92851CDFD20300C5CA5B"
                BuildableName = "ConnectFourTests.xctest"
                BlueprintName = "ConnectFourTests"
                ReferencedContainer = "container:ConnectFour.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D50F92401CDFD13400C5CA5B"
+            BlueprintIdentifier = "D50F92711CDFD20300C5CA5B"
             BuildableName = "ConnectFour.app"
             BlueprintName = "ConnectFour"
             ReferencedContainer = "container:ConnectFour.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D50F92401CDFD13400C5CA5B"
+            BlueprintIdentifier = "D50F92711CDFD20300C5CA5B"
             BuildableName = "ConnectFour.app"
             BlueprintName = "ConnectFour"
             ReferencedContainer = "container:ConnectFour.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D50F92401CDFD13400C5CA5B"
+            BlueprintIdentifier = "D50F92711CDFD20300C5CA5B"
             BuildableName = "ConnectFour.app"
             BlueprintName = "ConnectFour"
             ReferencedContainer = "container:ConnectFour.xcodeproj">
