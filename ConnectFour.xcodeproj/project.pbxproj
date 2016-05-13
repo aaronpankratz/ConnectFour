@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D50F92761CDFD20300C5CA5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F92751CDFD20300C5CA5B /* AppDelegate.swift */; };
-		D50F92781CDFD20300C5CA5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F92771CDFD20300C5CA5B /* ViewController.swift */; };
 		D50F927B1CDFD20300C5CA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F92791CDFD20300C5CA5B /* Main.storyboard */; };
 		D50F927D1CDFD20300C5CA5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50F927C1CDFD20300C5CA5B /* Assets.xcassets */; };
 		D50F92801CDFD20300C5CA5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50F927E1CDFD20300C5CA5B /* LaunchScreen.storyboard */; };
 		D50F928B1CDFD20300C5CA5B /* ConnectFourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F928A1CDFD20300C5CA5B /* ConnectFourTests.swift */; };
+		D50F929A1CDFD78D00C5CA5B /* ConnectFourEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F92991CDFD78D00C5CA5B /* ConnectFourEngine.swift */; };
+		D50F929C1CDFD7B500C5CA5B /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F929B1CDFD7B500C5CA5B /* BoardViewController.swift */; };
+		D50F929E1CE53D3B00C5CA5B /* ColumnTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F929D1CE53D3B00C5CA5B /* ColumnTapGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		D50F92721CDFD20300C5CA5B /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50F92751CDFD20300C5CA5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D50F92771CDFD20300C5CA5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D50F927A1CDFD20300C5CA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D50F927C1CDFD20300C5CA5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50F927F1CDFD20300C5CA5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		D50F92861CDFD20300C5CA5B /* ConnectFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50F928A1CDFD20300C5CA5B /* ConnectFourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectFourTests.swift; sourceTree = "<group>"; };
 		D50F928C1CDFD20300C5CA5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D50F92991CDFD78D00C5CA5B /* ConnectFourEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectFourEngine.swift; path = Models/ConnectFourEngine.swift; sourceTree = "<group>"; };
+		D50F929B1CDFD7B500C5CA5B /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardViewController.swift; path = Controllers/BoardViewController.swift; sourceTree = "<group>"; };
+		D50F929D1CE53D3B00C5CA5B /* ColumnTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColumnTapGestureRecognizer.swift; path = Views/ColumnTapGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,10 @@
 		D50F92741CDFD20300C5CA5B /* ConnectFour */ = {
 			isa = PBXGroup;
 			children = (
-				D50F92751CDFD20300C5CA5B /* AppDelegate.swift */,
-				D50F92771CDFD20300C5CA5B /* ViewController.swift */,
-				D50F92791CDFD20300C5CA5B /* Main.storyboard */,
-				D50F927C1CDFD20300C5CA5B /* Assets.xcassets */,
-				D50F927E1CDFD20300C5CA5B /* LaunchScreen.storyboard */,
-				D50F92811CDFD20300C5CA5B /* Info.plist */,
+				D50F92971CDFD2B700C5CA5B /* Models */,
+				D50F92981CDFD2BC00C5CA5B /* Views */,
+				D50F92961CDFD2A000C5CA5B /* Controllers */,
+				D50F92951CDFD29400C5CA5B /* Supporting Files */,
 			);
 			path = ConnectFour;
 			sourceTree = "<group>";
@@ -94,6 +96,42 @@
 				D50F928C1CDFD20300C5CA5B /* Info.plist */,
 			);
 			path = ConnectFourTests;
+			sourceTree = "<group>";
+		};
+		D50F92951CDFD29400C5CA5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D50F92751CDFD20300C5CA5B /* AppDelegate.swift */,
+				D50F927C1CDFD20300C5CA5B /* Assets.xcassets */,
+				D50F92811CDFD20300C5CA5B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D50F92961CDFD2A000C5CA5B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D50F929B1CDFD7B500C5CA5B /* BoardViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D50F92971CDFD2B700C5CA5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D50F92991CDFD78D00C5CA5B /* ConnectFourEngine.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D50F92981CDFD2BC00C5CA5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D50F92791CDFD20300C5CA5B /* Main.storyboard */,
+				D50F927E1CDFD20300C5CA5B /* LaunchScreen.storyboard */,
+				D50F929D1CE53D3B00C5CA5B /* ColumnTapGestureRecognizer.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50F92781CDFD20300C5CA5B /* ViewController.swift in Sources */,
+				D50F929C1CDFD7B500C5CA5B /* BoardViewController.swift in Sources */,
+				D50F929A1CDFD78D00C5CA5B /* ConnectFourEngine.swift in Sources */,
+				D50F929E1CE53D3B00C5CA5B /* ColumnTapGestureRecognizer.swift in Sources */,
 				D50F92761CDFD20300C5CA5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +430,7 @@
 				D50F92911CDFD20300C5CA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D50F92921CDFD20300C5CA5B /* Build configuration list for PBXNativeTarget "ConnectFourTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +439,7 @@
 				D50F92941CDFD20300C5CA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

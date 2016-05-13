@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BoardViewController" customModule="ConnectFour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,328 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eqn-AF-1YK">
+                                <rect key="frame" x="20" y="146" width="560" height="434"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-p8-Ef2">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-BC-zlK">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-vn-5YS">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-MM-SBU">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stf-Q0-QaT">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hlp-po-VjM">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-zh-d2y">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YcH-Cf-ic5" appends="YES" id="IXu-cf-gSS"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ip4-yO-ieZ">
+                                        <rect key="frame" x="81" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKG-qj-B6d">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4Q-TZ-N27">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75W-Bb-kgM">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzq-U3-BmW">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umN-Wl-pGR">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMr-81-QY6">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wbU-Dd-yyI" appends="YES" id="uPT-2D-U5J"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LSt-KL-Zey">
+                                        <rect key="frame" x="163" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="18" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-Ty-UiI">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="17" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1w-Pm-NeM">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-57-0Z0">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-PP-UhD">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyI-lZ-oFt">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajq-rt-FSk">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bxS-bw-SGN" appends="YES" id="DDm-CI-d2N"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7MR-Nm-nsK">
+                                        <rect key="frame" x="244" y="0.0" width="71" height="434"/>
+                                        <subviews>
+                                            <view tag="24" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-7R-vkz">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="23" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff7-5z-Eic">
+                                                <rect key="frame" x="0.0" y="74" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="22" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-DW-fw9">
+                                                <rect key="frame" x="0.0" y="148" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="21" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-hk-3h0">
+                                                <rect key="frame" x="0.0" y="222" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3g-ZV-q5A">
+                                                <rect key="frame" x="0.0" y="296" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="19" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7W-92-Utx">
+                                                <rect key="frame" x="0.0" y="370" width="71" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YHl-D3-e8v" appends="YES" id="MRq-iX-olR"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vof-gD-Nwq">
+                                        <rect key="frame" x="325" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="30" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovX-q5-4BG">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="29" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eng-ON-PXy">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="28" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hn-iH-ssT">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="27" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-6I-pCx">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="26" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-4C-riC">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCc-nk-k7f">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="JA5-rj-af3" appends="YES" id="xSf-JN-6hU"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZOW-Ze-se1">
+                                        <rect key="frame" x="407" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="36" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-RJ-TCw">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="35" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZd-wz-Cgz">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="34" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEe-Uc-jEc">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="33" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wJ-Ac-bSC">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="32" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-4t-YFd">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="31" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAO-7b-308">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wEt-T3-lqG" appends="YES" id="gxe-uW-3UT"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nIs-yU-Txo">
+                                        <rect key="frame" x="488" y="0.0" width="71.5" height="434"/>
+                                        <subviews>
+                                            <view tag="42" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqE-ze-OIL">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="41" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VC-V3-lDd">
+                                                <rect key="frame" x="0.0" y="74" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="40" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-GP-q5y">
+                                                <rect key="frame" x="0.0" y="148" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="39" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-Wz-mA6">
+                                                <rect key="frame" x="0.0" y="222" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="38" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fm-nF-dWI">
+                                                <rect key="frame" x="0.0" y="296" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view tag="37" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykk-nN-uG0">
+                                                <rect key="frame" x="0.0" y="370" width="71.5" height="64"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="UWH-AD-sUb" appends="YES" id="AS2-qh-soC"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="you-PI-kmk">
+                                <rect key="frame" x="248" y="44" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eqn-AF-1YK" secondAttribute="bottom" constant="20" id="0lp-2p-V1Y"/>
+                            <constraint firstItem="eqn-AF-1YK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6KQ-Ee-q1d"/>
+                            <constraint firstItem="you-PI-kmk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="GIR-tr-B59"/>
+                            <constraint firstItem="you-PI-kmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K1k-uR-Xot"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqn-AF-1YK" secondAttribute="trailing" id="lp3-oW-Llx"/>
+                            <constraint firstItem="eqn-AF-1YK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="126" id="ocO-eV-JdW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YcH-Cf-ic5" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="8aM-LC-uct"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wbU-Dd-yyI" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="MN2-qb-nam"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bxS-bw-SGN" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="Fxm-4z-fyr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YHl-D3-e8v" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="LUb-nr-wbq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JA5-rj-af3" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="A5z-yQ-TY5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wEt-T3-lqG" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="KW8-AL-TaH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UWH-AD-sUb" customClass="ColumnTapGestureRecognizer" customModule="ConnectFour" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="column">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tapColumn:" destination="BYZ-38-t0r" id="Mbz-qs-cCY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="266" y="422"/>
         </scene>
     </scenes>
 </document>
